@@ -42,7 +42,7 @@ This application is a desktop facial recognition system that utilizes a Flask AP
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/ImenBenAmar/face_identification.git
+   git clone https://github.com/fakhfakheya/face_identification.git
    cd facial-recognition-app
 
 2. **Create and activate a virtual environment:** 
