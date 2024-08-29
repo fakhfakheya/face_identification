@@ -219,10 +219,9 @@ def recognize():
             else:
                 return jsonify({"error": "Person not found in database"}), 404
         else:
-            return jsonify({"error": "No face detected"})
+            return jsonify({"error": "No face detected"}), 400
     except Exception as e:
-        return jsonify({"error": str(e)})
-
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/check_update', methods=['GET'])
 def check_update():
@@ -233,11 +232,5 @@ def check_update():
             return jsonify({"status": "Model update failed"}), 500
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
-
-@app.route('/')
-def home():
-    return "Hello, Flask is running!"
-
 if __name__ == '__main__':
     app.run(debug=True)
